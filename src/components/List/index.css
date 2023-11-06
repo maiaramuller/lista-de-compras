@@ -1,0 +1,6 @@
+li {
+  list-style-position: outside;
+  padding-left: 50px;
+  background-color: #fdfd96;
+  margin: 2px;
+}

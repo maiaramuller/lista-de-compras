@@ -1,0 +1,14 @@
+input {
+  background-color: #84b6f4;
+  text-align: center;
+  color: #fff;
+}
+
+button {
+  color: #151212;
+  background-color: #77dd77;
+}
+
+input {
+  padding-left: 0;
+}
