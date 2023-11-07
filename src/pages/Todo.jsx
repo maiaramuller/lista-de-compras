@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import List from "../components/List";
 import Form from "../components/Form";
 import "./Todo.css";
 
 const Todo = () => {
   const [task, setTask] = useState("");
-  const [itemsList, setItemsList] = useState([]);
+  const [itemsList, setItemsList] = useState(
+    JSON.parse(localStorage.getItem("task")) || []
+  );
 
   const handleChangeInput = (event) => {
     const inputTask = event.target.value;
@@ -21,6 +23,7 @@ const Todo = () => {
     }
 
     setItemsList([...itemsList, task]);
+    localStorage.setItem("task", JSON.stringify([...itemsList, task]));
     setTask("");
   };
 
